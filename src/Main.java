@@ -125,4 +125,13 @@ public class Main {
     }
 
 
+    // casteo
+
+    public static void calcularFaltas(int encuentros, double porcentaje){
+        int a= (int) (encuentros*porcentaje);
+        int faltas= encuentros - a;
+        System.out.println(faltas);
+    }
+
+
 }
