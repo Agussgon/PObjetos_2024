@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Scanner;
@@ -8,25 +9,62 @@ public class Main {
     public static void main(String[] args) {
 
 
-        //scanner
-        countSConsole();
-        Date hoy= new Date();
-       int  anioActual= hoy.getYear();
-        System.out.println(anioActual); //124
+        Object obj = "123";
+        //Integer numero = (Integer) obj; // Intento de casteo inválido classcastException
+
+        if (obj instanceof String) {
+            String str = (String) obj; //casteo
+            Integer numero = Integer.parseInt(str); // Parseo de String a Integer
+            System.out.println("Número: " + numero);
+        }
+
+
+
+        String cadena="1234" ;
+        Integer num= Integer.parseInt(cadena);
+        Double numDouble= Double.parseDouble(cadena);
+        String num2= Integer.toString(num);
+
 
         LocalDate fechaActual = LocalDate.now();
         LocalDate fechaNacimiento = LocalDate.of(1990, 8, 15);
         System.out.println("Año actual "+fechaActual.getYear() );
+       // System.out.println(fechaActual.getYear() - fechaNacimiento.getYear());
 
+
+        //of pattern
+        DateTimeFormatter fechaHoraPersonalizada= DateTimeFormatter.ofPattern("yyy MM dd");
+        String fechaFormateada=fechaHoraPersonalizada.format(fechaNacimiento);
+        System.out.println(fechaFormateada);
+
+        Date fecha=new Date(100,2,20);
+        System.out.println(fecha.toString());
+        Date hoy= new Date();
+        int  anioActual= hoy.getYear();
+        System.out.println(anioActual); //124
+
+        Float decimal=2.5f;
+        Double a= 2.5;
+        a.equals(decimal);
+
+
+
+        String saludo= null;
+        //saludo="";
+
+        if (saludo == null)
+        {
+            System.out.println("Cadena con valor nulo");
+        }else
+        {System.out.println("¿Qué retorna?" + saludo.length());
+        }
 
         compareStrings("hola","hola");
 
         Integer num1=20;
         Integer num2=1;
 
-
         compareInteger(2,1,110.2);
-
 
         countS("sasa asa");
 
@@ -48,11 +86,8 @@ public class Main {
             System.out.println(pelisMayus[i]);
         }
 
-        /*Crea una variable que guardará la primera película que comience con “L”,
-        debe recorrer el array buscando el primer resultado.
-         */
-
-
+        //scanner
+        countSConsole();
 
 
     }
@@ -126,3 +161,5 @@ public class Main {
 
 
 }
+
+
