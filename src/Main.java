@@ -62,7 +62,7 @@ public class Main {
         compareStrings("hola","hola");
 
         Integer num1=20;
-        Integer num2=1;
+        Integer num2_2=1;
 
         compareInteger(2,1,110.2);
 
@@ -160,6 +160,18 @@ public class Main {
     }
 
 
-}
 
+
+
+
+    // casteo
+
+    public static void calcularFaltas(int encuentros, double porcentaje){
+        int a= (int) (encuentros*porcentaje);
+        int faltas= encuentros - a;
+        System.out.println(faltas);
+    }
+
+
+}
 
