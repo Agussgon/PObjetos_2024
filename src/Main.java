@@ -1,14 +1,12 @@
 import entidades.Producto;
 
-import java.time.LocalDate;
-import java.time.Period;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.Scanner;
+
 
 public class Main {
 
     public static void main(String[] args) {
+
+
 
         //instanciamos el objeto
         Producto pelotaModelo1= new Producto("pelota modelo 2024",25000.0,
@@ -18,6 +16,8 @@ public class Main {
                 '\n'+ pelotaModelo1.informarStock()+
                 '\n'+ pelotaModelo1.stockDisponible()+
                 '\n'+pelotaModelo1.calcularGananciaObtenida());
+        System.out.println("constante comisión en producto "+ pelotaModelo1.getCOMISION()+'\n'+
+                "calculando comision usando la variable estática " + pelotaModelo1.calcularComision());
 
         Producto pelotaModelo2= new Producto();
         System.out.println("este lo creamos con el que viene por defecto implicito" +pelotaModelo2);

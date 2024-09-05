@@ -14,6 +14,8 @@ private Double precioCompra ;
 private Double precioVenta;
 private Integer stock;
 
+private static final double COMISION=0.15;
+
 // constructor explicito
 public Producto(String nombreRecibido, Double precioCompraRecibido,
                 Double precioVentaR, Integer stockR  ){
@@ -56,6 +58,16 @@ public Producto(){}
     return this.stock;
   }
 
+  //consutando por la variable estática
+    public double getCOMISION() {
+        return COMISION;
+    }
+
+    //usando la v.e
+    public Double calcularComision(){
+
+    return calcularGananciaObtenida()* COMISION;
+    }
 
     @Override
     public String toString() {
