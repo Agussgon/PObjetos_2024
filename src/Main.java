@@ -6,13 +6,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
         //scanner
     scannerDatosPersonales();
-
-
         //arrays
-
         System.out.println(" creando array sin ordenar");
         String[] comidas= new String[3];   // tiene tres elementos
         comidas[0]= "Pollo con limón";
