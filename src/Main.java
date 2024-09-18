@@ -9,7 +9,12 @@ public class Main {
     public static void main(String[] args) {
 
        // arrayScannerUnaLinea();
-       arrayScannerPelisSeparados();
+       //arrayScannerPelisSeparados();
+
+      // ordenarPelis();
+      //  pasarArrayMayus();
+
+        crearArrayAPartir2Cadenas();
 
     }
 
@@ -59,6 +64,113 @@ Debe generar un array de cuatro elementos.
                 System.out.println("esta es la peli que inicia con L" + "\n" +peliL);
             }
             System.out.println(nuevasPelis[i].toUpperCase());
+        }
+    }
+
+
+
+    public static void ordenarPelis(){
+        //
+        String[] pelisOrdenadas= new String[2];
+        // recibir información
+        Scanner scanner= new Scanner(System.in );
+
+        System.out.println("ingresa la peli 1 ");
+        String peli1= scanner.nextLine(); // recibe texto
+        pelisOrdenadas[0]= peli1;
+        System.out.println("ingresa la peli 2 ");
+        String peli2= scanner.nextLine();
+        pelisOrdenadas[1]= peli2;
+
+        Arrays.sort(pelisOrdenadas);
+        for (int i = 0; i < pelisOrdenadas.length  ; i++) {
+            System.out.println(pelisOrdenadas[i]);
+        }
+    }
+
+    public static void pasarArrayMayus(){
+
+        Scanner scanner= new Scanner(System.in);
+        System.out.println("Ingresa cuatro pelis separadas por coma ");
+        String pelisRecibidas= scanner.nextLine();
+        String[]  arrayPelisSeparadas= pelisRecibidas.split(",");
+        Arrays.sort(arrayPelisSeparadas);
+        for (int i=0; i < arrayPelisSeparadas.length; i++ ){
+            System.out.println(arrayPelisSeparadas[i].toUpperCase());
+        }
+
+
+    }
+
+
+    /*
+    * Necesitamos un programa que reciba dos cadenas de texto por consola y
+    * que  cada una contenga dos apellidos y nombres separados por una coma.
+El método debe retornar  la que tenga mayor cantidad de caracteres.
+*
+Debe generar un array de cuatro elementos.
+Debe guardar en el array e imprimirlas por consola.
+    *
+    * */
+
+    public static String comparandoNombres(){
+       String[] nombresRecibidos= new String[4];
+        //Recibimos la info
+        Scanner scanner= new Scanner(System.in);
+        System.out.println("ingrese apellido y nombre separado por coma");
+        String cadena1= scanner.nextLine();
+        System.out.println("ingrese el segundo apellido y nombre separado por coma");
+        String cadena2= scanner.nextLine();
+      /*
+        // guardar en el array e imprimir antes de que corte la ejecución
+        String[] nombresCadena1= cadena1.split(",");
+        nombresRecibidos[0]=nombresCadena1[0];
+        nombresRecibidos[1]= nombresCadena1[1];
+
+        String[] nombresCadena2= cadena2.split(",");
+        nombresRecibidos[2]=nombresCadena2[2];*/
+
+        // retorna la mayor cadena -1,0,1
+       if(cadena1.compareTo(cadena2) == -1){
+           return cadena2; }
+       else if( cadena1.compareTo(cadena2) == 0  ){
+           return "son iguales";
+       }else{
+           return cadena1; }
+
+
+    }
+
+    /*recibir dos cadenas de texto por consola, cada una debe tener dos pelis
+     separadas por coma.
+     Tenemos que guardarlas en un nuevo array e imprimir todos los elementos del mismo,
+      para eso necesitamos crear ese array primero
+       y despues de recibir con scanner los strings
+      utilizar split por cada cadena para crear un array temporal "" y
+      luego guardar sus dos elementos en el array general   */
+
+    public static void crearArrayAPartir2Cadenas(){
+
+
+        Scanner scanner= new Scanner(System.in);
+        System.out.println(" ingresa dos pelis separadas por coma");
+        String pelis1= scanner.nextLine();
+        System.out.println(" ingresa otras dos pelis separadas por coma");
+        String pelis2= scanner.nextLine(); // tengo parsearlo Array
+
+        String[] arrayNuevo= new String[4];
+
+        String[] pelisSeparadas1= pelis1.split(",");// {batman , robin } tenemos un array de 2 elementos
+        arrayNuevo[0] = pelisSeparadas1[0]; // batman
+        arrayNuevo[1]= pelisSeparadas1[1];// robin
+
+        String[] pelisSeparadas2= pelis2.split(","); // {superman,thor}
+        arrayNuevo[2]= pelisSeparadas2[0];
+        arrayNuevo[3]=pelisSeparadas2[1];
+
+
+        for (int i = 0; i < arrayNuevo.length; i++) {
+            System.out.println(arrayNuevo[i]);
         }
     }
 
