@@ -1,6 +1,6 @@
 public class Sube {
 
-    private int codigo;
+    private final int codigo;
     private double saldoDisponible;
     private static double limiteSaldoNegativo=400.0;
 
