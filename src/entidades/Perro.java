@@ -24,5 +24,10 @@ public class Perro extends Animal{
         System.out.println("Ladrar");
     }
 
+    @Override
+    public void comer(Integer cantidad) {
+        System.out.println("cantidad:");
+    }
+
 
 }

@@ -9,6 +9,11 @@ public class Gato extends Animal{
         this.cantidadPresas=presas;
     }
 
+// implementando método abstracto obligatorio ya no lleva la palabra abstract
+    @Override
+    public void comer(Integer cantidad){
+        System.out.println("cantidad de comida: "+ cantidad);
+    }
 
     //probando protected
     public void viendoAtributosPadre(){

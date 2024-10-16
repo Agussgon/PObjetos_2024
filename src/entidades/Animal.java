@@ -1,6 +1,6 @@
 package entidades;
 
-public class Animal {
+public abstract class Animal {
 
     protected String nombre;
     private Integer edad;
@@ -36,9 +36,7 @@ public class Animal {
     }
 
     // sobrecarga el nombre es el mismo pero la firma no es identica(parametros)
-    public void comer(){
-        System.out.println("comiendo");
-    }
+    public abstract void comer(Integer cantidad );
     public void comer(String comida){
         System.out.println("El animal come: "+ comida );
     }

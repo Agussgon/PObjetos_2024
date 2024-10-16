@@ -25,7 +25,7 @@ public class Main {
         rinTinTin.mostrarDatoProtegido();
 
         // uso de los métodos de la super clase
-        rinTinTin.comer();
+        rinTinTin.comer(2);
         rinTinTin.comer("Hueso");
         rinTinTin.hacerSonido();
 
@@ -36,7 +36,17 @@ public class Main {
 
       //  String nombreProtected= silvestre.raza;
 
-        Animal animal= new Animal("lagarto",2,"reptil");
+        Animal animal= new Perro("d",2,"r","a");
+        ((Perro)animal).pastorear();
+      // abstract
+      // Animal animalAbstractoFallido= new Animal();
+
+        // polimorfismo
+        animal.hacerSonido();
+        animal= new Gato("d",2,"r",3);
+        animal.hacerSonido();
+
+
         //String nombreAnimal= animal.raza;
         //método heredado sin sobrescribir
         System.out.println(silvestre.toString());
