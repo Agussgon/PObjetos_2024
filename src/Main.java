@@ -22,7 +22,8 @@ public class Main {
 
         System.out.println("sin utilizar el atributo monto acumulado");
         cuentaCorriente.extraer2(5000.0);
-        cuentaCorriente.extraer2(100000.0);
+        cuentaCorriente.extraer2(20000.0);
+        cuentaCorriente.extraer2(30000.0);
         cuentaCorriente.extraer2(50000.0);
 
         cuentaCorriente.depositar(80000.0);
