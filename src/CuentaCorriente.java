@@ -17,9 +17,9 @@ public class CuentaCorriente extends Cuenta {
         } else {
             if (!montoDisponible.equals(limiteMontoDescubierto)) {
                 Double diferencia = limiteMontoDescubierto - montoDisponible;
-                this.montoDisponible += diferencia;
+                this.montoDisponible = this.montoDisponible+ diferencia;
                 // restamos al deposito lo utilizado
-                monto -= diferencia;
+                monto -= diferencia; // ver el otro if
                 // ahora guardamos lo restante en saldo que estaba en cero...
                 this.setSaldo(monto);
                 System.out.println("saldo actual después de depositar" + this.getSaldo());
@@ -54,7 +54,7 @@ public class CuentaCorriente extends Cuenta {
 
     }
 
-    // otra opción sin el atributo montoDisponible
+    // otra opción sin el atributo montoDisponible reveer
     // el método depositar en este caso seria igual a la última opción del actual...
     public Double extraer2(Double monto) {
         if (monto <= this.getSaldo()) {

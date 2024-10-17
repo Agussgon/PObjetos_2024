@@ -14,6 +14,9 @@ public class CajaAhorro extends Cuenta {
      //this.saldo= this.saldo + monto;
             Double nuevoSaldo= this.getSaldo()+monto;
             this.setSaldo(nuevoSaldo);
+            System.out.println(" deposito "+monto +" ahora el saldo actualizado" +
+                    "es de "+
+                    getSaldo());
         }
 
     }

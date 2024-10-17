@@ -9,9 +9,8 @@ public class Main {
     public static void main(String[] args) {
 
 
-
-        CuentaCorriente cuentaCorriente= new CuentaCorriente(5000.0,new Cliente());
-       // System.out.println( cuentaCorriente.extraer(10000.0) );
+        CuentaCorriente cuentaCorriente = new CuentaCorriente(5000.0, new Cliente());
+        // System.out.println( cuentaCorriente.extraer(10000.0) );
    /*
 
     System.out.println("utilizando el atributo monto acumulado");
@@ -30,14 +29,15 @@ public class Main {
 
 
         // n° negativos
-        double n= 23;
-        if( 20 > -n ){
+        double n = 23;
+        if (20 > -n) {
             System.out.println("20 es más grande");
         }
-        if(n > - cuentaCorriente.getSaldo()){
+
+        //
+        if (n > -cuentaCorriente.getSaldo()) {
             System.out.println("23 es más grande");
         }
-
 
 
     }
