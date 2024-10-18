@@ -1,6 +1,6 @@
 package entidades;
 
-public class Gato extends Animal{
+public class Gato extends Animal  {
 
     private Integer cantidadPresas;
 

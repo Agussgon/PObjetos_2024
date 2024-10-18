@@ -15,7 +15,11 @@ public class Animal {
 
     }
 
-  // las clases hijas no pueden sobrescribirlo "final"
+    public Integer getEdad() {
+        return edad;
+    }
+
+    // las clases hijas no pueden sobrescribirlo "final"
     public final void mostrarComidas(){
         System.out.println(CANT_COMIDAS);
     }
